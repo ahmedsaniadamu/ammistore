@@ -1,0 +1,36 @@
+@import '../../global-styles/responsive' ;
+
+div.loading-effect-1{
+    width: 260px !important;
+    @include mobile-view(){   
+        width: 98% !important;
+     }
+    .image-placeholder{
+        height: 110px !important;
+        width: 260px !important;
+        @include mobile-view(){  
+             width: 98% !important;
+             height: 160px !important;
+        }
+    }
+    .product-name-placeholder,.rating-placeholder{
+         height: 25px !important;         
+         @include mobile-view(){   
+             width: 98% !important;
+             height: 30px !important;
+        }
+    }
+}
+div.loading-effect-2{
+     width: 100%;
+    .image-placeholder{
+        height: 80px;
+        width: 80px;
+    }
+    .wrapper{
+        width: 60%;
+    }
+    .product-name-placeholder,.rating-placeholder{
+        height: 20px;
+    }
+}

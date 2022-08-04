@@ -1,0 +1,189 @@
+@import '../../../global-styles/variables';
+@import '../../../global-styles/responsive' ;
+section.blog-id-page{
+    background: $light-background ;
+    div.post-info{
+       h5{
+          @include set-font-size(1.2rem,1.3rem,1.5rem)
+       }
+       &>div.header-info{
+           @include set-font-size(0.75rem,0.81rem,0.82rem) ;
+           span{
+                font-weight: 500;
+                i{ font-weight: normal; }
+              }
+           @include mobile-view(){
+              span{
+                 display: block;
+                 margin-left: 0 !important;
+              }
+           }
+       }
+       div.social-media{
+         @include set-font-size(00.83rem,0.92rem,0.95rem) ;
+         a.bi{
+            @include set-font-size(1.3rem,1.4rem,1.4rem) ;
+         }
+         a.bi-whatsapp{  color: rgb(11, 153, 23); }
+         a.bi-twitter{ color: rgb(4, 196, 221); }
+         a.bi-instagram{ color: rgb(155, 29, 7); }
+     }
+       &>img{
+          height: 460px;
+          @include mobile-view(){
+             height : 280px;
+          }
+       }
+       &>p{
+          line-height: 24px;
+          @include tablet-view(500px,3000px){
+             font-size: 0.9rem;
+             line-height: 30px
+          }
+       }       
+       div.comments-container{
+           h5{
+              width: auto !important;
+              @include set-font-size(1.1rem,1.09rem,1.2rem) ;
+              border-bottom-color: $base-color !important;
+           }
+           div.comment{
+              i.bi-person-circle{
+                  @include set-font-size(4.2rem,4.09rem,4.2rem) ;
+                  display: block;
+                  color: rgb(211, 218, 224);
+                  margin-top: -1rem;
+              }
+              h5{
+                  span{
+                     @include set-font-size(0.95rem,0.9rem,0.95rem) ;
+                  }
+                  i,small{
+                     @include set-font-size(0.8rem,0.8rem,0.78rem) ;
+                     display: block;
+                     opacity: 0.9 ;
+                     margin-top: 4px
+                  }                   
+              }
+              p.comment-body{
+                 @include set-font-size(0.8rem,0.89rem,0.842rem) ;
+                 font-style: italic ;     
+                 @include mobile-view(){
+                   margin-left: -4.2rem;
+                   margin-top: 13px;
+                 }
+              }
+              span.view-reply{ 
+                 color: $base-color ;
+                 @include mobile-view(){
+                  margin-left: -4.2rem;                   
+                }
+              }
+              div.reply-container{
+                 div.loading-spinner{
+                    height: 100px;                     
+                 }   
+                 div.reply{
+                  @include mobile-view(){
+                     margin-left: -2.2rem !important;                   
+                   }
+                   i.bi-person-circle{
+                      @include set-font-size(3.4rem,3.7rem,3.3rem) ;
+                      margin-top: -0.8rem
+                   }
+                  h5{
+                     span{
+                           @include set-font-size(0.86rem,0.87rem,0.87rem) ;
+                        }
+                        i{
+                           @include set-font-size(0.77rem,0.78rem,0.75rem) ;
+                           display: block;
+                           opacity: 0.9 ;
+                           margin-top: 4px
+                        }                   
+                      }
+                 } 
+                 p{
+                   @include set-font-size(0.77rem,0.78rem,0.75rem);
+                   font-style: italic;
+                 }     
+                 span.text-info,span.text-danger{
+                  &:hover{ cursor: pointer; }
+                   @include tablet-view(500px,3000px){
+                      font-size: 0.79rem;
+                   }
+                 }        
+              }
+              button{
+                 background: $base-color !important;
+                 @include set-font-size(0.8rem,0.8rem,0.76rem) ;
+              }
+              .link,span.view-reply{
+                  @include set-font-size(0.89rem,0.89rem,0.89rem) ;    
+                  &:hover{ cursor: pointer; }
+              }
+           }
+       }        
+    } 
+    div.related-post{      
+      h5{
+         @include set-font-size(0.95rem,0.2rem,0.92rem) ;
+         @include mobile-view(){
+            background: $base-color;
+            color: rgb(255,255,255);
+         }
+      }
+      div.d-flex{
+         &:hover{ 
+             cursor: pointer;
+             color: $base-color
+          }
+         img{
+             height: 80px;
+             width: 80px;      
+             @include mobile-view(){
+                 height: 90px;
+                 width: 90px;
+                 margin-left: 5px
+             }
+         }
+         p{
+            @include set-font-size(00.8rem,0.8rem,0.8rem) ;
+         }
+         span{
+            @include set-font-size(00.74rem,0.75rem,0.73rem) ;                        
+            display: block;
+            opacity: 0.9;
+         }
+      }
+    }    
+    div.loading-spinner{
+        height: 400px;
+        span{
+            color: $base-color;
+            height: 40px;
+            width: 40px;
+            font-size: 10px;
+        }
+    }
+    div.loading-spinner-full{
+       height: 100vh;
+       width: 100vw;
+       position: fixed;
+       top: 0;
+       left: 0;
+       z-index: 99999;
+       background: rgba(0,0,0,0.2);
+       div.loading-spinner{          
+         height : 100vh !important;
+         width: 100vw !important;
+         overflow: hidden;         
+         span{
+            color: rgb(252, 252, 252);
+            height: 60px;
+            width: 60px;
+            font-size: 14px;
+        }
+      }
+   }
+}

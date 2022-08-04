@@ -1,0 +1,56 @@
+@import '../../global-styles/responsive';
+@import '../../global-styles/variables' ;
+section.search-page{
+  background: $light-background;
+  &>h5{
+    @include set-font-size(00.81rem,0.9rem,0.95rem) ;
+    text-transform: capitalize;    
+   }
+   div.placeholder-container{
+    flex-wrap: wrap;
+    @include mobile-view(){                         
+        .mobile-none{ display: none; }              
+      } 
+    div.loading-effect-1{
+        margin-bottom: 1.2rem;
+        @include mobile-view(){  
+            width: 48% !important;
+            .image-placeholder{ height: 90px !important; }
+            .product-name-placeholder,.rating-placeholder{ height: 18px !important; }                
+        }
+     }        
+  } 
+  .page-links,.next,.prev{
+    @include set-font-size(00.85rem,00.9rem,00.9rem); 
+    color: $base-color;
+  }
+  .active{ border-bottom: 1px solid $base-color !important; }
+  div.row{
+    div.product-cart{
+       @include mobile-view(){
+          .stars{ margin-top: -25px }
+          div.price-wrapper{ margin-top: -11px }
+       }    
+      img{
+          width: 140px;
+          height: 140px;
+      }             
+      p{
+          @include set-font-size(00.79rem,00.79rem,00.79rem);  
+          text-overflow: ellipsis;
+          overflow: hidden;
+          height: 33px;                
+        }
+        div.price-wrapper{
+            span{
+              @include set-font-size(00.77rem,00.77rem,00.74rem);
+            }
+            span:nth-child(1){
+                text-decoration: line-through;
+                color: rgb(143, 19, 19);
+                margin-right: 1.5rem;
+            }
+        }
+  }
+ }
+}

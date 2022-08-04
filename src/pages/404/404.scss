@@ -1,0 +1,22 @@
+@import '../../global-styles/responsive';
+@import '../../global-styles/variables' ;
+div._404{      
+   height: 85vh;
+   @include mobile-view(){ height: 500px }
+   h5{
+      @include set-font-size(3.92rem,1.1rem,4.95rem) ;
+   }
+   h6{
+      @include set-font-size(1.3rem,1.4rem,1.3rem) ;
+   }
+   p{
+      @include set-font-size(00.92rem,1.1rem,0.95rem) ;
+   }
+   a{
+       background: $primary-background;
+       border-radius: 20px;
+       width: 200px;
+       @include set-font-size(00.8rem,0.9rem,0.9rem) ;
+       &:focus{  background: $primary-background !important;  }
+   }
+}

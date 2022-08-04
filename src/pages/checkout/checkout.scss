@@ -1,0 +1,78 @@
+@import '../../global-styles/responsive';
+@import '../../global-styles/variables';
+section.checkout-page{
+    background: $light-background ;   
+    @include tablet-view(500px,30000px){
+        &>h5{
+            font-size: 1.9rem;
+        }    
+        &>p{
+            font-size: 0.9rem;
+        }
+    }    
+    div.row{
+        h5{
+            @include set-font-size(0.99rem,00.99rem,1.1rem) ;
+            font-weight:600
+        }
+        form.checkout-form{
+            div.row{
+                &>div{
+                    margin-bottom: 0.7rem;
+                    label{  @include set-font-size(0.8rem,00.8rem,0.87rem) ; }
+                    input,select,textarea{
+                        @include set-font-size(0.8rem,00.8rem,0.85rem) ;
+                        &:focus{  border-color: $base-color !important; }
+                    }
+                    textarea{
+                        height: 120px;
+                    }     
+                    span.text-danger{
+                        @include set-font-size(0.81rem,00.8rem,0.81rem) ;
+                    }               
+                }
+            }
+            p{
+                @include set-font-size(0.76rem,00.8rem,0.89rem) ;
+                span{                     
+                    border : 1px solid #aaa;
+                    font-size: inherit !important;
+                }
+            }
+            div.cart-information{
+                @include tablet-view(500px,3000px){   
+                    width: 50% ;
+                }
+                ul{
+                    li{
+                        @include set-font-size(0.73rem,00.8rem,0.81rem) ;
+                    }
+                }
+            }            
+            button{
+                background: $primary-background !important;
+                border-radius: 30px;
+                @include set-font-size(0.9rem,00.9rem,0.9rem) ;
+            }
+        }
+        ul.order-summary{
+            li{
+                span{
+                    @include set-font-size(0.8rem,00.8rem,0.8rem) ;
+                    i{
+                        background : $primary-background ;
+                        padding: 1px 5px ;
+                        border-radius : 3px;
+                        font-style : normal ;                         
+                        color : rgb(255,255,255) ;
+                    }
+                }                
+            }
+            li.total{
+                 span{
+                    @include set-font-size(0.99rem,00.98rem,0.97rem) ; 
+                 }             
+            }
+        }
+    }
+}

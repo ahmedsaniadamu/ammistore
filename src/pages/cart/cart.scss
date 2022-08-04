@@ -1,0 +1,89 @@
+@import '../../global-styles/responsive';
+@import '../../global-styles/variables' ;
+section.cart-page{
+   background: $light-background;
+   div.bread-crumbs{
+    a{ 
+      @include set-font-size( 0.83rem , 0.91rem , 0.82rem ) ;
+       color : $base-color 
+    }
+    small{
+      @include set-font-size( 0.8rem , 0.83rem , 0.83rem ) ;
+    }
+  }
+   div.wrapper{
+        &>h5{
+            @include set-font-size(00.92rem,1.1rem,0.95rem) ;
+            span{ color : $base-color }
+        }
+        div.cart-item{
+          .btn-close{ 
+            @include set-font-size(00.82rem,00.82rem,00.82rem);  
+           }
+          img{
+            width: 200px;
+            height: 200px;
+            @include mobile-view(){
+              width: 150px;
+              height: 150px;
+            }
+          }
+          p{
+            @include set-font-size(00.85rem,00.92rem,00.95rem);               
+          }
+          .stars{ pointer-events: none; }
+          div.price-wrapper{ 
+            span{
+              @include set-font-size(00.85rem,00.91rem,00.92rem);
+              color: $base-color;              
+            }                          
+           }
+            div.quantity-wrapper{  
+               button,span{
+                 @include set-font-size(00.92rem,00.92rem,00.90rem);
+                 color : rgb(0,0,0) ;
+               }   
+               button{ 
+                     background : rgb(230,230,230) !important ;
+                     font-weight: 600;
+                    }                            
+          }
+        }
+        div.order-summary{
+           &>div{
+               width:40% ;
+               border-top:3px solid $base-color;       
+               @include tablet-view(){ width : 50% }
+               @include mobile-view(){ width : 100% }     
+               ul{
+                  li{
+                     @include set-font-size(00.86rem,00.92rem,00.90rem);
+                  }
+               } 
+               a.checkout-btn{
+                  @include set-font-size(00.87rem,00.89rem,00.89rem); 
+                  border-radius: 30px;
+                  background: $base-color;
+               }         
+           }
+        }
+        div.no-cart-items{
+          img{
+              height: 240px;
+              width: 280px;
+          }
+          h5{
+              @include set-font-size(1.1rem,1.2rem,1.3rem); 
+          }
+          p{  
+              @include set-font-size(00.81rem,00.79rem,00.79rem); 
+          }
+          a{
+              width: 200px;
+              @include set-font-size(00.81rem,00.79rem,00.79rem); 
+              border-radius: 20px;
+              background: $primary-background;            
+          }
+      }
+   }
+}

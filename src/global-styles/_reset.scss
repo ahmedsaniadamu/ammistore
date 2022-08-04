@@ -1,0 +1,39 @@
+/* reset default browser styles */
+*{
+    margin: {
+        top: 0; left: 0; right: 0; bottom: 0
+    } ;
+
+    padding: {
+    top: 0; left: 0; right: 0; bottom: 0
+    };
+    box-sizing: border-box;
+}
+/* hide side scroll bar icon from the page and keep functionality */
+/* for chrome , opera and safari in mobile and tablet devices  */
+ @media screen and (max-width:800px) {
+    ::-webkit-scrollbar{
+        display: none;
+        width: 0;
+    }
+ }
+body{    
+       overflow-x: hidden;
+       /* hide side scroll bar icon from the page and keep functionality */
+      /* internet explorer edge and firefox  in mobile and tablet devices*/       
+        @media screen and (max-width:800px) {
+            -ms-overflow-style: none;
+            margin: 0;
+            padding: 0;
+         }
+   }
+a{ 
+    text-decoration: none;    
+ }
+button:hover,button:focus,button:active,input:focus,a:focus,select:focus,select:active,textarea:focus,textarea:active{
+    box-shadow: 0 0 0 transparent !important;
+}
+button,a{ border: none !important; }
+ 
+
+ 

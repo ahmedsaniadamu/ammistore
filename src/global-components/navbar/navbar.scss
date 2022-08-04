@@ -1,0 +1,117 @@
+@import '../../global-styles/responsive' ;
+@import '../../global-styles/variables' ;
+
+@mixin  navigation-links {
+    span.dd-btn{
+        text-transform: capitalize;
+        &:hover{cursor: pointer; }
+        i.bi-person-circle{
+            font-size: 1.5rem;
+        }
+        i.bi-chevron-down{   font-size: 0.7rem; }
+    }
+    ul.login-dd-menu{
+        li{
+            a{
+                font-size: 0.85rem;         
+                &:focus{ background: transparent !important; color: rgb(0, 0, 0); }        
+                i.bi{  font-size: 1.1rem;   }                                           
+            }
+        }
+    }
+    a,span.dd-btn{  
+        font-size: 0.95rem;
+        margin-right: 1.2rem;
+        sup{ 
+            font-size: 0.9rem; 
+            @include mobile-view(){  
+                margin-left: -4px;               
+            }
+            margin-top: -7px;                                  
+           }        
+     }
+     a.bi{ font-size: 1.7rem; }
+     a.bi-heart{ font-size: 1.4rem; }
+}
+
+nav.navbar-wrapper{
+    background: $primary-background; 
+    height: 60px;    
+    @include mobile-view(){  height: 55px; }
+    div.desktop-navbar{
+        img.logo{ 
+            width: 100px;
+            height: 60px;
+         }
+         div.desktop-search-bar{
+             width: 50%;               
+             @include tablet-view(800px,990px){ width: 40%; }
+             button,input{  font-size: 0.9rem; }
+             button.btn-light{  
+                 border-right: 1px solid rgb(206, 204, 204) !important; 
+                 font-weight: 300;                    
+               }
+             input{ 
+                    border: none;                                        
+                } 
+            ul.dropdown-menu{
+                li{
+                    a{
+                        &:hover{
+                            color: rgb(255, 255, 255);
+                            background: $primary-background;
+                            opacity: 0.9;
+                        }
+                        img{
+                            height: 26px;
+                            width: 26px;
+                        }
+                        span{
+                            text-transform: uppercase;
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+            }           
+         }
+         div.navigation-links-wrapper{
+            @include navigation-links() ;
+         }
+    }
+    div.mobile-navbar{
+        img.logo{ 
+            width: 80px;
+            height: 55px;
+         }
+         div.navigation-links{
+            @include navigation-links() ;
+            i.bi-person-circle{
+                font-size: 1.9rem !important;
+            }
+            span.bi-justify{
+                font-size: 1.8rem;
+            }
+         }
+    }
+    div.offcanvas{
+        color: rgb(0, 0, 0);
+        div.offcanvas-header{
+             background: $primary-background;
+            span.bi-arrow-left-short{
+                font-size: 1.8rem;
+                color: rgb(255, 255, 255) !important;
+            }
+        }
+        div.offcanvas-body{
+           h5{
+               font-size: $header-five-font-size-mobile ;
+           }           
+            a{
+                color: rgba(0, 0, 0,0.9);
+                font-size: 1rem;
+                text-transform: capitalize;
+                &:hover,&>*:hover{  color: $base-color; }
+            }              
+        }
+    }
+}

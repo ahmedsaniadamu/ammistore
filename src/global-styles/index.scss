@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@500&family=Roboto+Slab:wght@500&display=swap');
+@import 'reset' ;
+@import 'responsive' ;
+//global variables
+$mobile-font-size : 13px;
+$table-font-size : 16px ;
+$desktop-font-size : 18px ;
+
+
+body{
+   background: rgb(238, 238, 245);
+   font-family: 'Open Sans',sans-serif;
+   font-size: $desktop-font-size;
+   @include tablet-view(){ font-size: $table-font-size; }
+   @include mobile-view(){ 
+       font-size: $mobile-font-size;
+       background: rgb(243, 246, 255); 
+    }
+}

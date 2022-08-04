@@ -1,0 +1,16 @@
+@import '../../global-styles/responsive';
+@import '../../global-styles/variables' ;
+div.no-network-connection{      
+   height: 100vh;   
+   h5{
+      @include set-font-size(6.92rem,7.1rem,7.95rem) ;
+      opacity: 0.8;
+   }
+   h6{
+      @include set-font-size(1.3rem,1.4rem,1.3rem) ;
+   }
+   p{
+      @include set-font-size(00.92rem,1.1rem,0.95rem) ;
+   }
+   
+}

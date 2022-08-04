@@ -1,0 +1,134 @@
+@import '../../global-styles/responsive';
+@import '../../global-styles/variables' ;
+section.dashboard-page{
+    background: $light-background;
+   &>h5{
+       @include set-font-size(1rem,1rem,1.4rem)
+   } 
+   div.loading-spinner{
+       height: 300px;
+       span{
+           color: $base-color;
+           height: 40px;
+           width: 40px;
+           font-size: 10px;
+       }
+   }
+   table{
+      thead{         
+         tr{            
+            th{
+                @include set-font-size(0.9rem,0.95rem,0.93rem)
+                opacity:0.9
+            }
+         }
+      }
+      tbody{
+        tr{            
+            border-color:#eee !important;
+            td{
+                @include set-font-size(0.85rem,0.8rem,0.8rem);
+                img{
+                    height:80px;
+                    width : 80px;
+                    @include mobile-view(){
+                        height:100px;
+                        width : 100px;
+                    }
+                }    
+                button{
+                    font-size : inherit;
+                    background : $base-color !important;
+                    @include mobile-view(){
+                        width:100px
+                    }
+                }          
+            }
+            td.product-name{
+                span{
+                    width : 190px;
+                    height:80px;
+                    overflow : hidden;
+                    @include mobile-view(){
+                        width:150px
+                    }
+                }
+            }          
+         }
+      }     
+   }
+   div.modal-window{
+       width :100vw;
+       height : 100vh;
+       position : fixed;
+       top:0;
+       left:0;
+       z-index : 9999;
+       overflow : hidden;
+       background : rgba(0,0,0,0.25) ;
+       &>div{
+           div.modal-window-dialog{
+              width : 50%;
+              height :500px;
+              @include mobile-view(){
+                width : 92%;
+                height :500px;
+                overflow-y: scroll;
+              }
+              div.modal-header{
+                 h5{
+                    @include set-font-size(1rem,1rem,1rem)
+                 }
+              }
+              div.modal-body{
+                 div.d-flex{
+                     @include mobile-view(){ flex-direction: column; }
+                     img{
+                        width : 300px;
+                        height :300px;
+                     }
+                     ul{
+                        li{
+                            border: none !important;
+                            span{
+                                @include set-font-size(0.85rem,0.8rem,0.8rem);
+                            }
+                        }
+                     }
+                 }
+              }
+           }
+       }
+   }
+   div.summary{       
+       ul{
+          border-radius: 0 !important;
+          width: 40%;
+          @include mobile-view(){  width: 80%; }
+          border-top: 2px solid $base-color !important;
+          li{
+                span{
+                    @include set-font-size(0.87rem,0.92rem,0.9rem);
+                }
+          }
+       }
+   }
+   div.empty-orders-wrapper{
+      &>div{
+         img{
+             height : 280px;
+             width : 300px ;
+         }
+         p{
+            @include set-font-size(0.85rem,0.9rem,0.9rem)
+         }
+         a{
+            background: $base-color !important;
+            width : 240px;
+            border-radius:30px;
+            text-align : center;
+            @include set-font-size(1rem,1rem,1rem)
+         }
+      }
+   }
+}

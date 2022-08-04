@@ -1,0 +1,47 @@
+@import '../../global-styles/responsive' ;
+@import '../../global-styles/variables';
+section.login-signup{
+    div.signup-wrapper,div.login-wrapper{
+        width: 43%;
+        border-radius: 10px;
+        background: $light-background;
+        @include mobile-view(){ width: 98%; }
+        @include tablet-view(){ width: 75%; }
+        form.login-form{
+            span.bi{
+                @include set-font-size(4.92rem,3.1rem,3.93rem) ;
+                color: $base-color;
+            }
+        }
+        form.signup-form,form.login-form{
+           width: 92%;
+           h5{
+              @include set-font-size(1.3rem,1.3rem,1.4rem) ;
+              font-weight: 600;
+              letter-spacing: 0.9px;
+           }
+           div.input-wrapper{ margin-top: 0.6rem }
+           p,label,button{
+              @include set-font-size(00.92rem,1.1rem,0.93rem) ;
+           }
+           input{  @include set-font-size(00.9rem,0.9rem,0.9rem) ;  }
+           span.divider{
+              width: 200px;
+              display: block;
+              height: 5px;
+              border-radius: 5px;
+              background: $primary-background;
+           }    
+           div.text-danger{  
+               @include set-font-size(00.87rem,0.82rem,0.81rem) ;
+               margin-top: 5px;
+             } 
+            button{
+                width: 60%;
+                background: $primary-background;
+                border-radius: 30px;
+                @include mobile-view(){ width: 98%; }
+            }               
+        }
+    }
+}

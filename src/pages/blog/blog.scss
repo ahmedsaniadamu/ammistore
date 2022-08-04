@@ -1,0 +1,47 @@
+@import '../../global-styles/variables';
+@import '../../global-styles/responsive' ;
+section.blog-page{
+    background: $light-background ;
+    div.bread-crumbs{
+       a{ 
+         @include set-font-size( 0.87rem , 0.91rem , 0.88rem ) ;
+          color : $base-color 
+       }
+       small{
+         @include set-font-size( 0.8rem , 0.83rem , 0.83rem ) ;
+       }
+    }
+    fieldset{
+        legend{
+            @include set-font-size( 0.9rem , 1.3rem , 1.2rem ) ;         
+        }
+    }
+    article.blog-posts{
+        div.col-12{
+            div.border{          
+                &:hover{ cursor: pointer; }      
+                img{
+                    height: 220px;
+                }
+                @include tablet-view(600px,3000px){
+                    margin-top: 0.5rem;
+                    span.bi{
+                        font-size: 0.9rem;
+                    }
+                    p{
+                        font-size: 0.83rem;
+                    }
+                }
+            }
+        }
+    }
+    div.loading-spinner{
+        height: 400px;
+        span{
+            color: $base-color;
+            height: 40px;
+            width: 40px;
+            font-size: 10px;
+        }
+    }
+}

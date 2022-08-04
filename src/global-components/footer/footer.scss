@@ -1,0 +1,43 @@
+@import '../../global-styles/responsive';
+@import '../../global-styles/variables';
+footer{
+    background: $footer-background;
+    div.back-to-top{
+        background:  rgb(16, 18, 31);
+        @include set-font-size(0.9rem,1rem,0.9rem) ;
+    }
+    div.row{
+         @include mobile-view(){
+            &>div{
+               margin-bottom: 1rem;
+               li{ padding-left: 0 !important }
+            }
+         }
+        h5{
+            @include set-font-size(00.92rem,1.1rem,1rem) ;
+            color: rgb(255, 255, 255);
+        }
+        a{ 
+            color: rgb(255, 255, 255);
+            opacity: 0.9;
+            @include set-font-size(00.82rem,1.1rem,0.9rem) ;
+         }    
+         a.mail{  
+             white-space: nowrap;
+             text-overflow: ellipsis;
+             @include set-font-size(00.78rem,1.1rem,0.9rem) ; 
+         }    
+        ul,li{ 
+            background: transparent !important;
+            border: none;
+        }
+        li.social-media{
+             color: rgb(240, 239, 239);
+        }
+    }
+    p{
+        @include set-font-size(00.87rem,0.89rem,0.82rem) ;
+        color: rgb(255, 255, 255);
+        opacity: 0.5;
+    }
+}
