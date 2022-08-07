@@ -1,7 +1,7 @@
 import React, { useState , useEffect } from 'react'
 import Reply from './Reply'
-import LoadingSpinner from '../../components/LoadingSpinner'
-import { useSelector } from 'react-redux'
+import LoadingSpinner from '../../../components/LoadingSpinner'
+import { RepliesContext } from './repliesContext'
 
 const CommentReplies = ({ commentId }) => {
  
@@ -17,18 +17,18 @@ const CommentReplies = ({ commentId }) => {
           }       
       }
       fetcher()
-    } , [ commentId]
+    } , [ commentId ]
   )
 
   return (
-    <>
+    <RepliesContext.Provider value={{ setReplies , commentId }}>
         {   
             replies.length ?
-               <Reply replies = { replies } />              
+               <Reply replies = { replies }  />              
             : 
               <LoadingSpinner />
          }
-    </>
+    </RepliesContext.Provider>
   )
 }
 

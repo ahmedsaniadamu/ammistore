@@ -5,8 +5,8 @@ import './blog-id.scss'
 import { useNavigateTop } from '../../../global-components/custom-hooks/useNavigateTop'
 import useSWR  from 'swr'
 import RelatedPosts from './components/RelatedPosts'
-import PostComments from './components/PostComments'
-
+import PostComments from './components/comments/PostComments'
+ 
 const BlogId = () => {
 
   useNavigateTop()
@@ -84,7 +84,7 @@ const BlogId = () => {
                          <h5 className='border-bottom border-2 border-success d-inline-block pe-2 mb-3'>
                              Comments 
                           </h5>
-                          <PostComments  postId = { postId } />
+                          <PostComments  postId = { postId } />                          
                      </div>
                   </div>
                  <div className='col-12 col-md-4 col-xl-3 related-post px-0'>

@@ -31,7 +31,7 @@ section.blog-id-page{
        &>img{
           height: 460px;
           @include mobile-view(){
-             height : 280px;
+             height : 240px;
           }
        }
        &>p{
@@ -55,6 +55,7 @@ section.blog-id-page{
                   margin-top: -1rem;
               }
               h5{
+                  text-transform: capitalize;
                   span{
                      @include set-font-size(0.95rem,0.9rem,0.95rem) ;
                   }
@@ -92,11 +93,12 @@ section.blog-id-page{
                       margin-top: -0.8rem
                    }
                   h5{
+                     text-transform: capitalize;
                      span{
                            @include set-font-size(0.86rem,0.87rem,0.87rem) ;
                         }
                         i{
-                           @include set-font-size(0.77rem,0.78rem,0.75rem) ;
+                           @include set-font-size(0.74rem,0.78rem,0.75rem) ;
                            display: block;
                            opacity: 0.9 ;
                            margin-top: 4px
@@ -104,7 +106,7 @@ section.blog-id-page{
                       }
                  } 
                  p{
-                   @include set-font-size(0.77rem,0.78rem,0.75rem);
+                   @include set-font-size(0.77rem,0.78rem,0.79rem);
                    font-style: italic;
                  }     
                  span.text-info,span.text-danger{
@@ -123,15 +125,55 @@ section.blog-id-page{
                   &:hover{ cursor: pointer; }
               }
            }
+           div.edit-reply-container{
+               height: 270px !important;
+               @include tablet-view(800px,3000px){
+                  width:600px !important;
+                  height: 300px !important;
+               }
+               div.offcanvas-header{
+                   button{                       
+                       background: transparent !important;
+                       font-size: 1.2rem !important
+                   }
+               }
+           }
+       }
+       div.comment-form-wrapper{
+          fieldset{
+              legend{
+                 @include set-font-size(1.1rem,1.2rem,1.3rem) ;   
+              }
+          }
+          &>p,label{
+            @include set-font-size(0.86rem,0.9rem,0.95rem) ;
+          }
+          form{
+             width: 80%;
+             margin-left: 0 !important;
+             @include mobile-view(){
+                width: 100%
+             }
+             input,textarea{
+               @include set-font-size(0.9rem,0.9rem,0.9rem) ;
+             }
+             textarea{
+               height: 150px;
+             }
+             div.text-danger{
+               @include set-font-size(0.88rem,0.9rem,0.9rem) ;
+             }
+             button{
+                background: $base-color !important;
+                width: 200px;
+                border-radius: 20px
+             }
+          }
        }        
     } 
     div.related-post{      
       h5{
-         @include set-font-size(0.95rem,0.2rem,0.92rem) ;
-         @include mobile-view(){
-            background: $base-color;
-            color: rgb(255,255,255);
-         }
+         @include set-font-size(0.95rem,0.2rem,0.92rem) ;        
       }
       div.d-flex{
          &:hover{ 
@@ -180,9 +222,9 @@ section.blog-id-page{
          overflow: hidden;         
          span{
             color: rgb(252, 252, 252);
-            height: 60px;
-            width: 60px;
-            font-size: 14px;
+            height: 48px;
+            width: 48px ;
+            font-size: 14px;            
         }
       }
    }

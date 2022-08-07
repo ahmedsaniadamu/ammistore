@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import CommentReplies from './CommentReplies'
+import CommentReplies from '../replies/CommentReplies'
 
 const Comment = ({ comment }) => {
 

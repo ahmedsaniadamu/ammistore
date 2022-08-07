@@ -1,4 +1,5 @@
 /* reset default browser styles */
+@import 'variables';
 *{
     margin: {
         top: 0; left: 0; right: 0; bottom: 0
@@ -34,6 +35,7 @@ button:hover,button:focus,button:active,input:focus,a:focus,select:focus,select:
     box-shadow: 0 0 0 transparent !important;
 }
 button,a{ border: none !important; }
+input:focus,textarea:focus{ border-color: $base-color !important; }
  
 
  

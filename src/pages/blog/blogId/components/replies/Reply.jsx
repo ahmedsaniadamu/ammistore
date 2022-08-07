@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import DeleteReply from './DeleteReply'
+import DeleteReply from './actions/DeleteReply'
+import EditReply from './actions/EditReply'
 
 const Reply = ({ replies }) => {
 
@@ -19,8 +20,12 @@ const Reply = ({ replies }) => {
                       <span> { reply.customerName } </span>                                                  
                         <i> 
                           {   
-                            `${ new Date(reply.dateCreated).toLocaleDateString( 'en-US', dateOptions ) }`
+                            `${ new Date(reply.dateCreated).toLocaleDateString( 'en-US', dateOptions ) }  `
                           }   
+                          at                          
+                          {
+                             ` ${ new Date(reply.dateCreated).toLocaleTimeString() }`
+                          }
                         </i>                  
                   </h5>
                   <p className='mb-1'> {  reply.reply } </p>
@@ -31,9 +36,7 @@ const Reply = ({ replies }) => {
                         */
                         ( isAuth && email === reply.customerEmail ) &&
                         <>
-                            <span className='text-info'>
-                              Edit 
-                            </span> 
+                            <EditReply replyId = { reply.id } />
                             <DeleteReply replyId = { reply.id } />
                         </>
                     }
