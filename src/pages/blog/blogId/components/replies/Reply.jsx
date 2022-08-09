@@ -36,7 +36,7 @@ const Reply = ({ replies }) => {
                         */
                         ( isAuth && email === reply.customerEmail ) &&
                         <>
-                            <EditReply replyId = { reply.id } />
+                            <EditReply replyId = { reply.id } reply = { reply.reply } />
                             <DeleteReply replyId = { reply.id } />
                         </>
                     }

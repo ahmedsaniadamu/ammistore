@@ -4,14 +4,13 @@ const CarouselImages = [
     '/assets/The-Ultimate-Deal.webp',
     '/assets/Lazada-9BDAY_TH-Key-Visual-1-600x338.jpg',     
     '/assets/banner-and-eCommerce.jpg',
-    '/assets/okladka-przepis-na-kaloryczny-black-friday-w-ecommerce-800x420.png',         
-    '/assets/BlackFriday.jpg',
+    '/assets/okladka-przepis-na-kaloryczny-black-friday-w-ecommerce-800x420.png',              
     '/assets/IMG_20220522_090526.png',               
  ]
 const HighlightImages = [
   '/assets/Konga-flash-sales-scaled-e1593377258604.jpg',
   '/assets/black-friday-4606219.jpg',
-  '/assets/img1.PNG',
+  '/assets/BlackFriday.jpg',
   '/assets/big-summer.jpg'
 ]
 

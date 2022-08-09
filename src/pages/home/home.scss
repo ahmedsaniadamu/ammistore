@@ -183,7 +183,7 @@ section.product-section-wrapper-2{
         }
     }
     div.hot-deals{
-        @include mobile-view(){  margin-top: 1.2rem; }   
+        @include mobile-view(){  margin-top: 0.5rem; }   
         .m-none{
             @include mobile-view(){ display: none; }
         }
@@ -344,6 +344,10 @@ section.newsletter-wrapper{
     background: $light-background;
     &>h5{
         @include set-font-size(1rem,1.5rem,1.2rem) ;
+        b{
+            color: $base-color;
+            font-weight: 400
+        }
     }
     p{
         @include set-font-size(0.85rem,0.92rem,0.92rem) ;

@@ -21,34 +21,34 @@ const Home = () => {
         <MobileHeader />
         <Carousel />
         <Services />
-        <section className='product-section-wrapper-1 mt-2 mt-md-3 px-1 py-2 px-md-4  mx-md-5 mb-2 '>
+        <section className='product-section-wrapper-1 mt-2 mt-md-2 px-1 py-2 px-md-4  mx-md-5 mb-md-1'>
              <h5 className='pb-2 border-bottom pt-1'>  
                    Recommended For You  
                    <Link to={'/products?filter=computers'} > view more. </Link>
              </h5>
              <RecommendedProducts />
         </section>
-        <section className='product-section-wrapper-2 px-1 py-2  mx-md-5 mb-0 mb-md-2 row justify-content-between'>
+        <section className='product-section-wrapper-2 px-1 py-2  mx-md-5 mb-0 row justify-content-between'>
             <SpecialProducts className={'col-12 col-sm-4 m-0'} />
             <HotDeals className={ 'col-12 col-sm-7' } />
         </section>
-        <section className='product-section-wrapper-3 mt-2 mt-md-3 px-1 py-2 px-md-4  mx-md-5 mb-3'>
+        <section className='product-section-wrapper-3 mt-1  px-1 py-2 px-md-4  mx-md-5 mb-0'>
              <h5 className='pb-2 border-bottom pt-1'>  
                     Mobile and Electronics Devices 
                    <Link to={'/products?filter=electronics'} > view more. </Link>
              </h5>
               <MobileAndAccessories />
         </section>
-        <section className='product-section-wrapper-4 mt-2 mt-md-3 px-1 py-2 px-md-4  mx-md-5 mb-3'>
+        <section className='product-section-wrapper-4 mt-0 mt-md-2  px-1 py-2 px-md-4  mx-md-5 mb-0'>
              <h5 className='pb-2 border-bottom pt-1'>  
                     High Quality Photographic Cameras
                    <Link to={'/products?filter=cameras'} > view more. </Link>
              </h5>
               <Cameras />
         </section>
-        <section className='newsletter-wrapper mt-2 mt-md-3 px-1 pt-2 pb-3 px-md-4  mx-md-5'>
+        <section className='newsletter-wrapper mt-0 px-1 pt-2 pb-3 px-md-4  mx-md-5'>
              <h5 className='pb-2 text-center pt-1 text-center mb-0'>  
-                    Subscribe to Our Newsletters.
+                    <b> Subscribe</b> to Our Newsletters.
              </h5>  
              <p className='text-center'> 
                   Signup for our weekly newsletter to get the latest news , updates

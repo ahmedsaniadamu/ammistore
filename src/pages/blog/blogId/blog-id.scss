@@ -125,8 +125,8 @@ section.blog-id-page{
                   &:hover{ cursor: pointer; }
               }
            }
-           div.edit-reply-container{
-               height: 270px !important;
+           div.edit-reply-container,div.add-reply-container{
+               height: 250px !important;
                @include tablet-view(800px,3000px){
                   width:600px !important;
                   height: 300px !important;
@@ -135,6 +135,21 @@ section.blog-id-page{
                    button{                       
                        background: transparent !important;
                        font-size: 1.2rem !important
+                   }
+               }
+               form.edit-reply-form,form.add-reply-form{
+                  textarea{
+                     height: 150px;
+                     @include set-font-size(0.9rem,0.9rem,0.9rem) ;
+                     @include mobile-view(){
+                        height : 130px ;
+                     }
+                   }
+                   div.text-danger{
+                     @include set-font-size(0.88rem,0.9rem,0.88rem) ;
+                   }
+                   button.btn-danger{
+                      background:  rgb(204, 1, 1) !important;
                    }
                }
            }
