@@ -16,6 +16,7 @@ const ModalWindow = ({ product , setOpenModal }) => {
                                 <img 
                                      src={ process.env.REACT_APP_SERVER_URL  + product.image } 
                                      alt={ product.name } 
+                                     className = 'ms-2'
                                  /> 
                                  <ul className='list-group border-0'>
                                      <li className='list-group-item'>

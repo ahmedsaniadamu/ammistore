@@ -41,12 +41,15 @@ const Login = () => {
           })
         const credentials = await response.json()
         //submit user credentials to redux store on successful registration.
-        if( credentials.status ) {
+        if( credentials.status ) {        
             dispatch( signUser( credentials ) )                                           
+            setLoading(false)
              navigate(-2,{ replace : true })
         }  
-        else setLoginError( credentials.messege )                          
-        setLoading( false )
+        else {
+             setLoginError( credentials.messege )                          
+              setLoading( false )
+        }
     }
     submitFormData()      
    }      

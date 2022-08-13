@@ -27,11 +27,12 @@ const EditReply = ({ replyId , reply }) => {
           let _editReply = async () => {                            
               const req = await fetch(`${ process.env.REACT_APP_SERVER_URL }api/blog-replies.php`,
                 {
-                  method : 'PATCH',
+                  method : 'POST',
                   headers : {
                           'content-type' : 'application/json'
                         } ,
                   body : JSON.stringify({ 
+                      method : 'PATCH',
                       replyId , 
                       commentId ,
                       reply : editReply.reply

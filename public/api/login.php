@@ -22,20 +22,20 @@
     $result = $stmt -> get_result() ;
     $stmt -> store_result();  
     //returns a json object with user credentials if the user is registered sucessfully.
-    $user = $result -> fetch_all(MYSQLI_ASSOC)[0]  ;
-    if( count( $user ) > 0 ){
-            //verify user password
-            $hashed_password = $user['password'] ;
+    $customer = $result -> fetch_all(MYSQLI_ASSOC) ;
+    if( count( $customer ) > 0 ){
+             $customer = $customer[0] ;
+            //verify customer password
+            $hashed_password = $customer['password'] ;
             if( password_verify( $password , $hashed_password )) {
-                $user['status'] = 1 ;
-                unset( $user['password'] ) ;
-                echo json_encode( $user ) ;
+                $customer['status'] = 1 ;
+                unset( $customer['password'] ) ;
+                echo json_encode( $customer ) ;
             }
             else echo json_encode([ 'status' => 0 , 'messege' => 'Error! incorrect password.']) ;                    
     }
-    else echo json_encode([ 'status' => 0 , 'messege' => 'Error! user does not exist.']) ;
+    else echo json_encode([ 'status' => 0 , 'messege' => 'Error! customer does not exist.']) ;
     $stmt -> close() ;
     $conn -> close() ;
-}     
-
+  }     
 ?>

@@ -15,7 +15,16 @@ const CommentReplies = ({ comment }) => {
   useEffect(
     () => {
      const fetcher = async () => {
-       const request = await fetch(`${ process.env.REACT_APP_SERVER_URL }api/blog-replies.php?commentId=${ comment.id }`)
+       const request = await fetch(`${ process.env.REACT_APP_SERVER_URL }api/blog-replies.php`,{
+         method : 'POST',
+         headers : {
+             'content-type' : 'application/json'
+           } ,
+         body: JSON.stringify({
+            method : 'GET',
+            commentId : comment.id 
+         })
+       })
        const result = await request.json()
         if( result.status ) {
              setReplies([...result.replies])

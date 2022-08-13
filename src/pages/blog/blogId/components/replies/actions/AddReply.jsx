@@ -34,7 +34,8 @@ const AddReply = () => {
                     headers : {
                             'content-type' : 'application/json'
                           } ,
-                    body : JSON.stringify({ 
+                    body : JSON.stringify({
+                        method : 'POST',
                         customerId : id , 
                         commentId ,
                         reply : addReply.reply

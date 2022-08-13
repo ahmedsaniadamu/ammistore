@@ -23,7 +23,7 @@ import BlogId from './pages/blog/blogId/BlogId';
  const App = () => {     
     //--------------------------------------------------------------------------//
        //check wether a  user is not connected to the internet.
-       //if(!window.navigator.onLine) return ( <NoNetworkConnection /> ) 
+       if(!window.navigator.onLine) return ( <NoNetworkConnection /> ) 
     //--------------------------------------------------------------------------//         
      return (
          <Fragment>             

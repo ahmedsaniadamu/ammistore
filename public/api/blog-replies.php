@@ -8,13 +8,13 @@
  //--------------------------------------------------------------------//
  // check which http request method was send from client.
  //--------------------------------------------------------------------//
-  switch( $_SERVER['REQUEST_METHOD'] ){
+  switch( $request_body['method'] ){
         #----------------------------------------------------------------------#
            # select all replies if request method is = GET 
         #----------------------------------------------------------------------#
       case 'GET' :
-           if( isset($_GET['commentId']) ) {
-                $replies -> getReplies($_GET['commentId']) ;                      
+           if( isset($request_body['commentId']) ) {
+                $replies -> getReplies($request_body['commentId']) ;                      
            } 
            else echo http_response_code(404);
        break ;      

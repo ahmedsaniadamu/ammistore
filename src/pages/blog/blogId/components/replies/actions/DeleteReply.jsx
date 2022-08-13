@@ -17,11 +17,15 @@ const DeleteReply = ({ replyId }) => {
         const request = await fetch(
                  `${ process.env.REACT_APP_SERVER_URL }api/blog-replies.php` ,
                  {
-                    method : 'DELETE',
+                    method : 'POST',
                     headers : {
                         'content-type' : 'application/json'
                     } ,
-                    body : JSON.stringify({ replyId , commentId })
+                    body : JSON.stringify({ 
+                        method : 'DELETE',
+                        replyId , 
+                        commentId                        
+                     })
                  }
               )
         const response = await request.json()
