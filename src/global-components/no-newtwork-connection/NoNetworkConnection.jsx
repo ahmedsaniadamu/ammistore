@@ -10,7 +10,7 @@ const NoNetworkConnection = () => {
                     <span className='text-danger me-1'> Error! </span>
                     No Network Access
                 </h6>
-                <p className='text-center'>
+                <p className='text-center px-2'>
                     You are not connected to the internet. please
                     check your internet settings and try again.
                 </p>

@@ -28,7 +28,7 @@ export const cartSlice = createSlice({
         } ,
         deleteCartItem : ( state , { payload }) => {
             state.products = state.products.filter( cart => cart.id !== payload )
-            toast('1 item is deleted from wishlist', { type :'error' })
+            toast('1 item is deleted from cart.', { type :'error' })
         } ,
         increaseQuantity : ( state , { payload } ) => {
              // payload === index of the cart item

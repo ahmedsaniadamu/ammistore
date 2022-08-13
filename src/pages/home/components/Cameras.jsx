@@ -21,7 +21,8 @@ const Cameras = () => {
             <LoadingEffect />             
             <LoadingEffect className={'m-none'} />
             <LoadingEffect className={'m-none'}/>
-            <LoadingEffect className={'m-none'}/>
+            <LoadingEffect className={'m-none mt-3'}/>
+            <LoadingEffect className={'m-none mt-3'}/>
             <LoadingEffect className={'mt-3 m-none'} />
             <LoadingEffect className={'mt-3 m-none'} />
             <LoadingEffect className={'mt-3 m-none'} />

@@ -17,7 +17,7 @@ const HighlightImages = [
 const Carousel = () => {
  
   return (
-    <section className='px-1 px-md-2 px-xl-5 mx-md-2 row m-0 mx-auto mt-1 mt-sm-3'>
+    <section className='px-1 px-md-4 px-xl-5 mx-md-2 row m-0 mx-auto mt-1 mt-sm-3'>
         <div className='col-12 col-md-7 p-0 carousel-images-wrapper'>
            <div id='demo' className='carousel carousel-fade slide' data-bs-ride='carousel'>          
                 <div className='carousel-inner'>

@@ -20,10 +20,11 @@ import Dashboard from './pages/dashboard/Dashboard';
 import Blog from './pages/blog/Blog';
 import BlogId from './pages/blog/blogId/BlogId';
 
- const App = () => {
-     
-     //check if user is not connected to the internet
-   //  if(!window.navigator.onLine) return ( <NoNetworkConnection /> )     
+ const App = () => {     
+    //--------------------------------------------------------------------------//
+       //check wether a  user is not connected to the internet.
+       //if(!window.navigator.onLine) return ( <NoNetworkConnection /> ) 
+    //--------------------------------------------------------------------------//         
      return (
          <Fragment>             
              <BrowserRouter>

@@ -19,7 +19,7 @@ const Cart = () => {
           <div className='wrapper mx-1 mx-md-5 mt-md-2'>
               <h5 className='pb-1'> My Cart  ({ products.length }) </h5>
               <CartItems />
-              { products.length && <OrderSummary /> }
+              { products.length ? <OrderSummary /> : null }
           </div>
     </section>
   )

@@ -34,7 +34,7 @@ const RelatedProduct = ({ category , id }) => {
              :
              <div className='placeholder-container d-flex justify-content-center justify-content-md-between'>
                 <LoadingEffect className={'ms-1 ms-sm-0'}/>
-                <LoadingEffect className= {'mobile-none'} />
+                <LoadingEffect className= {'d-none d-xl-block'} />
                 <LoadingEffect className={ 'mobile-none' } />
                 <LoadingEffect className={'mobile-none'}/>
             </div>

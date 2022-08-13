@@ -33,6 +33,9 @@ section.blog-id-page{
           @include mobile-view(){
              height : 240px;
           }
+          @include tablet-view(500px,1000px){
+             height: 360px;
+          }
        }
        &>p{
           line-height: 24px;
@@ -188,7 +191,10 @@ section.blog-id-page{
     } 
     div.related-post{      
       h5{
-         @include set-font-size(0.95rem,0.2rem,0.92rem) ;        
+         @include set-font-size(0.95rem,0.2rem,0.92rem) ; 
+          @include mobile-view() {
+            font-weight: 600;  
+          }
       }
       div.d-flex{
          &:hover{ 

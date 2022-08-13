@@ -29,9 +29,11 @@ const SpecialProducts = ({ className }) => {
                          } 
                      </div>
                     :
-                    <div className='placeholder-wrapper ms-2 ms-sm-0'>
+                    <div className='placeholder-wrapper ms-2 ms-sm-0 pb-2 mb-1'>
                         <LoadingEffect2 className={'mt-2'} />
                         <LoadingEffect2 className={'mt-2'} />
+                        <LoadingEffect2  className={'mt-2'} />
+                        <LoadingEffect2  className={'mt-2'}/>
                         <LoadingEffect2  className={'mt-2'} />
                         <LoadingEffect2  className={'mt-2'}/>
                   </div>

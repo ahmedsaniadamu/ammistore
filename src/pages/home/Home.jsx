@@ -19,7 +19,9 @@ const Home = () => {
   return (
     <section className='home-page'>
         <MobileHeader />
-        <Carousel />
+         <div className='px-md-2 px-xl-0'>
+           <Carousel />
+         </div>
         <Services />
         <section className='product-section-wrapper-1 mt-2 mt-md-2 px-1 py-2 px-md-4  mx-md-5 mb-md-1'>
              <h5 className='pb-2 border-bottom pt-1'>  

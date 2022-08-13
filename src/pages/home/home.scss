@@ -11,7 +11,9 @@ div.Toastify__toast-body{
 section.home-page{
     header.mobile-header{
         background: $light-background ;
-        h5{ font-size: $header-five-font-size-mobile; }
+        h5{ 
+            font-size: $header-five-font-size-mobile;            
+        }
         div.categories-wrapper{
             white-space: nowrap;
             overflow-x: scroll;
@@ -26,7 +28,7 @@ section.home-page{
                      span{
                          text-align: center;
                          text-transform: capitalize;
-                         font-size: 0.97rem;
+                         font-size: 0.94rem;
                      }
                  }
             }
@@ -38,7 +40,7 @@ section.home-page{
                  height: 360px;
                  border-radius: 10px;
                  @include mobile-view(){ 
-                     height: 230px;
+                     height: 220px;
                      border-radius: 0;
                  }
              }             
@@ -68,7 +70,10 @@ section.home-page{
        }
        h5{  
            font-size: $header-five-font-size - 5px;
-           @include mobile-view(){  font-size: $header-five-font-size-mobile - 3px; }
+           @include mobile-view(){  
+              font-size: $header-five-font-size-mobile - 4px; 
+              font-weight:600;
+            }
        }
        span.text{
            font-size: 0.8rem;
@@ -78,6 +83,9 @@ section.home-page{
        background: $light-background;  
        &>h5{
            @include set-font-size(00.97rem,1.1rem,1rem) ;
+           @include mobile-view(){
+              font-weight:600;
+           }
            a{ 
                color: $base-color;
                margin-left: 6rem;
@@ -145,10 +153,13 @@ section.home-page{
 section.product-section-wrapper-2{
     h5{
         @include set-font-size(00.97rem,1.1rem,1rem) ;
+        @include mobile-view(){
+            font-weight:600;
+         }
     }
     div.special-products,div.hot-deals{ background: $light-background;   }
     div.special-products{       
-        @include tablet-view(970px,3000px) {
+        @include tablet-view(900px,3000px) {
             width: 28% !important;
         }
         div.products-wrapper{
@@ -187,18 +198,23 @@ section.product-section-wrapper-2{
         .m-none{
             @include mobile-view(){ display: none; }
         }
-        @include tablet-view(970px,3000px) {
-            width: 70% !important;
+        @include tablet-view(900px,3000px) {
+            width: 71% !important;
         }
         div.placeholder-wrapper{
             flex-wrap: wrap;
             div.loading-effect-1{
-                width: 250px !important;   
+                width: 30% !important;   
                 @include mobile-view(){ width : 100% !important }             
                 .image-placeholder{                   
-                    width: 250px !important;    
+                    width: 100% !important;    
                     height: 160px !important;   
-                    @include mobile-view(){ width : 100% !important }               
+                    @include mobile-view(){ 
+                         width : 100% !important 
+                    }     
+                    @include tablet-view(900px,3000px) {
+                        height: 130px !important;
+                    }          
                 }               
             }            
         }
@@ -221,7 +237,10 @@ section.product-section-wrapper-2{
                  @include mobile-view(){ width: 200px; }  
                  img{
                     width: 80%;
-                    height: 200px;      
+                    height: 200px;     
+                    @include tablet-view(500px,1000px){
+                        height: 160px;
+                    }
                     @include mobile-view(){ 
                         height: 140px ;
                         width : 120px ;
@@ -271,6 +290,9 @@ section.product-section-wrapper-4{
     }        
     &>h5{
         @include set-font-size(00.93rem,1.1rem,1rem) ;
+        @include mobile-view(){
+            font-weight:600;
+         }
         a{ 
             color: $base-color;
             margin-left: 6rem;

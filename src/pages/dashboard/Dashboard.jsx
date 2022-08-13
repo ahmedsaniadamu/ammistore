@@ -12,7 +12,7 @@ const Dashboard = () => {
   const { id , email } = useSelector(  state => state.login )
   
   const fetcher = async () => {
-    const res = await fetch(`${process.env.REACT_APP_SERVER_URL}api/customer-orders.php?customer-id=${id}&customer-email=${email}`)
+    const res = await fetch(`${process.env.REACT_APP_SERVER_URL}api/orders.php?customer-id=${id}&customer-email=${email}`)
     const data = await res.json() 
     return data ;
   }      

@@ -21,7 +21,7 @@ const MoreItems = () => {
             <LoadingEffect />
             <LoadingEffect className= {'mobile-none'} />
             <LoadingEffect className={ 'mobile-none' } />
-            <LoadingEffect className={'mobile-none'}/>
+            <LoadingEffect className={'d-none d-xl-block'}/>
        </div>
       )
   }
