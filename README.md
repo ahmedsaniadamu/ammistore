@@ -2,7 +2,7 @@
 # Full Stack Progressive Ecommerce web application
 Frontend: React v18, Redux toolkit, Boostrap5, Sass <br />
 Backend: PHP & MySql  <br />
-Payment Gateway: Flutterwave <br />
+Payment Gateway: Flutterwave <br /><br /><br />
 Customers can signup/login, add product to thier cart or wishlist, purchase product and view their orders. 
 it also contains a blog page where customers can read blog posts add comments and replies.
 
